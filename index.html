@@ -1,0 +1,2514 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Abbot - Portal do Solicitante</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="shortcut icon" href="https://dqnkcwgy21udk.cloudfront.net/view/12812/img/favicon.ico">
+    <link rel="stylesheet" href="abbott-portal_files/custom_bootstrap.min.css">
+    <link rel="stylesheet" href="abbott-portal_files/font-awesome.min.css">
+    <link rel="stylesheet" href="abbott-portal_files/All.min.css"><!-- Google Tag Manager -->
+    <script async="" src="abbott-portal_files/google-analytics_analytics.js"></script>
+    <script
+        defer="defer">        (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-5D8BV4ZS');    </script>
+    <!-- End Google Tag Manager -->
+    <script src="abbott-portal_files/page-script.js" id="bw-fido2-page-script"></script>
+</head>
+<style>
+    /** Wallpaper **/
+
+    .WallpaperModal {
+        background-image: url(https://d26ms337shgvg4.cloudfront.net/d37fa98a1bb750707e7bbcd1ce4a268e5d185d918b6a330720e1da2b112dbc0617a9f08b/PlanoOK.png);
+    }
+
+
+
+    /** Barra Superior Azul(Padrao) **/
+
+    .navbar-default {
+        background-color: #000000;
+    }
+
+    #ModalLoginPortal .modal-header {
+        padding: 15px;
+        border-bottom: 1px solid #EEB33B;
+        min-height: 16.4px;
+        background-color: #084c6c;
+    }
+
+
+    #ModalLoginPortal .modal-body {
+        position: relative;
+        padding: 20px;
+        background: #084c6c;
+    }
+
+
+    #ModalLoginPortal .panel-body {
+        padding: 15px;
+        background-color: #084c6c;
+    }
+
+    .glyphicon-comment:before {
+        content: "\e111";
+        color: #FFFFFF;
+        font-size: 20px;
+    }
+
+    #ModalLoginPortal .modal-footer {
+        padding: 20px;
+        text-align: right;
+        border-top: 1px solid #eeb33b;
+        background-color: #084c6c;
+    }
+
+    #ModalLoginPortal .panel-default {
+        border-color: #EEB33B !important;
+    }
+
+    #ModalLoginPortal .panel {
+        margin-bottom: 21px;
+        background-color: #eeb33b;
+        border-radius: 0 0 4px 4px;
+        border-left: 3px solid;
+        border-bottom: 1px solid rgba(108, 108, 108, 0.2) !important;
+        border-top: 1px solid rgba(108, 108, 108, 0.2) !important;
+        border-right: 1px solid rgba(108, 108, 108, 0.2) !important;
+        -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+        box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    }
+
+    .nav-tabs {
+        border-bottom: 1px solid #eeb33b;
+    }
+
+    panel-default>.panel-heading {
+        background-color: #fdfdfd !important;
+        border-color: #dddddd;
+    }
+
+    .nav-tabs>li.active>a,
+    .nav-tabs>li.active>a:hover,
+    .nav-tabs>li.active>a:focus {
+        color: #eeb33b;
+        ;
+        background-color: #084c6c;
+        border: 1px solid #eeb33b;
+        border-bottom-color: transparent;
+        cursor: default;
+    }
+
+    .Logar {
+        color: #fdfdfd !important;
+        background-color: #084c6c !important;
+        border-color: #eeb33b !important;
+    }
+
+    .Logar:hover {
+        color: #ffffff !important;
+        background-color: #eeb33b !important;
+        border-color: #084c6c !important;
+    }
+
+    .modal-footer .fa-google {
+        color: #dc4a38 !important;
+        background-color: #ffffff !important;
+        border-color: #ffffff !important;
+        margin-right: -5px;
+        padding: 8px;
+        display: none;
+    }
+
+    #ModalLoginPortal .control-label {
+        font-size: 12px;
+        font-weight: normal;
+        color: white;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #ModalLoginPortal .modal-footer a {
+        color: #ffffff !important;
+        text-decoration: none;
+    }
+
+    #ModalLoginPortal .panel-default>.panel-heading {
+        color: white;
+        background-color: #084c6c !important;
+        border-color: #dddddd;
+    }
+
+    .btn-primary {
+        color: #fff !important;
+        background-color: #004f71 !important;
+        border-color: #fff !important;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary.focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open>.dropdown-toggle.btn-primary {
+        color: #009cde !important;
+        background-color: #ffffff !important;
+        border-color: #009CDE !important;
+    }
+
+    .btn.btn-success.btn-lg.Br50.Criar {
+        color: #ffffff !important;
+        background-color: #009CDE !important;
+        border-color: #009CDE !important;
+        box-shadow: 0 0 3px rgb(0 0 0 / 14%), 0 2px 4px rgb(0 0 0 / 20%);
+    }
+
+    .btn.btn-success.btn-lg.Br50.Criar:hover {
+        color: #ffffff !important;
+        background-color: #002A3A !important;
+        border-color: #002A3A !important;
+        box-shadow: 0 0 3px rgb(0 0 0 / 14%), 0 2px 4px rgb(0 0 0 / 20%);
+    }
+
+    .sidebar ul li a.active {
+        border-left: 4px solid #002a3a !important;
+        text-indent: -8px;
+        font-weight: bold !important;
+        color: #002a3a;
+    }
+
+    .prop-type.active {
+        color: #ffffff !important;
+        background-color: #009cde !important;
+        border-color: #009cde !important;
+    }
+
+    .btn-info {
+        color: #009cde;
+        background-color: #fff;
+        border-color: #009cde;
+
+        .alert-success {
+            background-color: #004f71 !important;
+            border-color: #004f71 !important;
+            color: #ffffff !important;
+        }
+
+        .navbar-default .dropdown-menu>li>a:hover,
+        .navbar-default .dropdown-menu>.active>a,
+        .navbar-default .dropdown-menu>.active>a:hover {
+            color: #fff;
+            background-color: #009cde;
+        }
+</style>
+
+<body
+    data-appconf="{'hostname':'','nome':'csc','base':'','extensao':'','bp':'','apps':['Portal'],'similar':['Home'],'sm':{'unlock':'PUT','lock':'PUT'},'serialize':{'unchecked':'off'},'CDN':'https://dqnkcwgy21udk.cloudfront.net/','cache':[],'ajaxCDN':'https://dqnkcwgy21udk.cloudfront.net/','lc':'Portal','ct':'x-www-form-urlencoded','pth':[]}"
+    data-new-gr-c-s-check-loaded="8.912.0" data-gr-ext-installed="" class="">
+    <!-- Google Tag Manager (noscript) --><noscript><iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5D8BV4ZS" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->
+    <div id="timerPanel" style="width:0%;"></div>
+    <style type="text/css">
+        [data-h="progressbar"] {
+            height: 2070px;
+            line-height: 2070px;
+        }
+    </style>
+    <div id="wrapper" class="defaultmode">
+        <div id="Menu">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="navbar-header"> <button type="button" class="navbar-toggle navbar-left"
+                        data-target=".navbar-collapse" data-toggle="mostraAreaMenu"> <span class="sr-only">Menu
+                            Principal</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+                            class="icon-bar"></span> </button> <a class="navbar-brand logoHome active" href="#Home"
+                        onclick="graficosHomePortal();"><img src="abbott-portal_files/3408945227Logo-OK.png"
+                            height="38"></a> <span id="my-page-header"></span> </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li><a class="dropdown-toggle" style="color: #ccc;"><b>Chatbot</b></a></a></li>
+                    <li class="dropdown DropdownMenuChat" data-toggle="tooltip" data-placement="auto top" title=""
+                        data-ltooltip="Sim" data-original-title="Chat"> <i class="fa fa-circle hide" aria-hidden="true"
+                            style="color:rgb(219,0,0);position:absolute;top:7px;left:7px;"></i> <a
+                            href="javascript:void(0)" id="DropdownMenuChat"> <i
+                                class="glyphicon glyphicon-comment fa-fw"></i> </a>
+                        <ul class="dropdown-menu dropdown-messages maisimChat H500 W350"></ul>
+                    </li>
+                    <!-- <li class="dropdown" data-toggle="tooltip" data-placement="auto top" title="" data-ltooltip="Sim"
+                        data-original-title="Alertas"> <a class="dropdown-toggle" data-toggle="dropdown"
+                            href="javascript:void(0)" id="DropdownMenuAlertas"> <span class="badge hide"></span> <i
+                                class="fa fa-bell fa-fw"></i> </a>
+                        <ul class="dropdown-menu dropdown-messages"></ul>
+                    </li>
+                    <li class="dropdown" data-toggle="tooltip" data-placement="auto top" title="" data-ltooltip="Sim"
+                        data-original-title="Conta e Configurações"> <a class="dropdown-toggle" data-toggle="dropdown"
+                            href="javascript:void(0)" id="DropdownMenuUser"> <i class="fa fa-user fa-fw"></i> </a>
+                        <ul class="dropdown-menu dropdown-messages"></ul>
+                    </li>
+                    <li class="dropdown" data-toggle="tooltip" data-placement="auto top" title="" data-ltooltip="Sim"
+                        data-original-title="Full Screen"> <a class="dropdown-toggle" href="javascript:void(0)"
+                            onclick="toggleFullScreen();" id="DropdownMenuFullScreen"> <i
+                                class="fa fa-arrows-alt fa-fw"></i> </a> </li> -->
+                </ul>
+                <div class="sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu" style="height: 1288px;">
+                            <li class="sidebar-search"> <input type="text" class="form-control input-sm"
+                                    placeholder="Pesquisar..." id="PesquisaMenu"> </li>
+                            <li> <a href="#Home" onclick="graficosHomePortal();" class="active"><i
+                                        class="fa fa-dashboard fa-fw"></i> Página Inicial</a> </li>
+                            <li><a onclick="return false;"><i class="fa fa-location-arrow fa-fw"></i><span>
+                                        Informações do Distrito</span></a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="#Chamados">Tarefas Pendentes</a></li>
+                                    <li><a href="#ProjetosQuadro">Planilhas</a></li>
+                                    <li><a href="#BaseConhecimento">Comentários do Plano de Ciclo</a></li>
+                                    <li><a href="#Notificacoes">Status de Entregas de Amostras</a></li>
+                                    <!-- <li><a href="#RelatorioChamados">Relatório de Chamados</a></li> -->
+                                </ul>
+                            </li>
+                            <li><a onclick="return false;"><i class="fa fa-location-arrow fa-fw"></i><span>
+                                        Primeiros Passos</span></a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="#Chamados">Manual da Força de Vendas</a></li>
+                                    <li><a href="#ProjetosQuadro">Perguntas Frequentes Compliance</a></li>
+                                    <li><a href="#BaseConhecimento">Perguntas Frequentes Recursos Humanos</a></li>
+                                    <li><a href="#Notificacoes">Perguntas Frequentes Logins e Acessos</a></li>
+                                    <!-- <li><a href="#RelatorioChamados"></a></li> -->
+                                </ul>
+                            </li>
+                            <li><a onclick="return false;"><i class="fa fa-location-arrow fa-fw"></i><span>
+                                        Finanças</span></a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="#Chamados">Holerite</a></li>
+                                    <li><a href="#ProjetosQuadro">Compra de Ações</a></li>
+                                    <li><a href="#BaseConhecimento">Compra de Produtos Abbott</a></li>
+                                    <li><a href="#Notificacoes">Fundação Clara Abbott</a></li>
+                                    <!-- <li><a href="#RelatorioChamados"></a></li> -->
+                                </ul>
+                            </li>
+                            <li><a onclick="return false;"><i class="fa fa-location-arrow fa-fw"></i><span>
+                                        Denúncias</span></a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="#Chamados">Speak Up</a></li>
+                                    <li><a href="#ProjetosQuadro">Compliance</a></li>
+                                    <!-- <li><a href="#BaseConhecimento">Compra de Produtos Abbott</a></li>
+                                    <li><a href="#Notificacoes">Fundação Clara Abbott</a></li>
+                                    <li><a href="#RelatorioChamados"></a></li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="Base">
+            <div class="modal WallpaperModal" id="ModalDirecionaPrefixo" data-e="DirecionaPrefixo" tabindex="-1"
+                role="dialog" aria-labelledby="ModalLabelDirecionaPrefixo" aria-hidden="true" data-keyboard="false"
+                data-backdrop="static">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="ModalLabelDirecionaPrefixo" data-l="InformePrefixo"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-warning" role="alert"> <strong data-l="Atencao"></strong> <span
+                                    data-l="AlertaPrefixoNaoEncontrado"></span> </div>
+                            <form>
+                                <div class="form-group"> <label class="control-label" data-l="Prefixo"></label> <input
+                                        type="text" class="form-control" name="Prefixo" data-fc="true" required="">
+                                </div>
+                                <div class="form-group"> <button type="button"
+                                        class="btn btn-success btn-lg W100p DirecionaPrefixo" data-dpl="LoginPortal"
+                                        data-l="PortalCliente"></button> </div>
+                                <div class="form-group"> <button type="button"
+                                        class="btn btn-success btn-lg W100p DirecionaPrefixo" data-dpl="LoginTicket"
+                                        data-l="PortalOperador"></button> </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalLoginEmpresa" data-e="Logar" tabindex="-1" role="dialog"
+                aria-labelledby="ModalLabelLoginEmpresa" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalLabelLoginEmpresa">Escolha uma Empresa</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="MsgModal"> </div>
+                            <form> <input type="hidden" name="Prefixo">
+                                <div class="form-group"> <label class="control-label">Empresa:</label>
+                                    <div data-h="LoginEmpresa"></div>
+                                </div>
+                                <div class="form-group"> <button type="button" class="btn btn-default btn-lg"
+                                        data-dismiss="modal" data-l="Fechar" data-toggle="tooltip"
+                                        data-placement="auto top" title="(Esc)"></button> <button type="button"
+                                        class="btn btn-success btn-lg Logar" data-l="Entrar" data-tm="portal/empresa"
+                                        data-toggle="tooltip" data-placement="auto top" title="(Ctrl+Enter)"></button>
+                                </div>
+                            </form>
+                            <div class="MsgModal"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalControleUsuario" tabindex="-1" role="dialog"
+                aria-labelledby="ModalLabelControleUsuario" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalLabelControleUsuario" data-l="EditarMeusDados"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="MsgModal"> </div>
+                            <form class="form-horizontal Pt10" role="form" method="PUT" data-bitwarden-watching="1">
+                                <div id="ControleUsuario" class="hide"></div> <input type="hidden" class="form-control"
+                                    name="TUsuario[Chave]"> <input type="hidden" class="form-control"
+                                    name="TUsuario[EditarMeusDados]" value="S"> <input type="hidden"
+                                    class="form-control" name="TUsuario[MudarSenhaAtivo]" value="N" disabled="disabled">
+                                <input type="hidden" class="form-control" name="TUsuario[IdiomaAtual]">
+                                <div class="form-group"> <label class="control-label col-sm-2" data-l="Nome"></label>
+                                    <div class="col-sm-4"> <input type="text" class="form-control" name="TUsuario[Nome]"
+                                            maxlength="100" required=""> </div> <label class="control-label col-sm-1"
+                                        data-l="Sobrenome"></label>
+                                    <div class="col-sm-4"> <input type="text" class="form-control"
+                                            name="TUsuario[Sobrenome]" maxlength="200"> </div>
+                                </div>
+                                <div class="form-group"> <label class="control-label col-sm-2"
+                                        data-l="Telefone"></label>
+                                    <div class="col-sm-4"> <input type="text" class="form-control"
+                                            name="TUsuario[Telefone]"> </div> <label class="control-label col-sm-1"
+                                        data-l="Ramal"></label>
+                                    <div class="col-sm-2"> <input type="text" class="form-control"
+                                            name="TUsuario[Ramal]"> </div>
+                                </div>
+                                <div class="form-group"> <label class="control-label col-sm-2" data-l="Senha"></label>
+                                    <div class="col-sm-4"> <input type="password" class="form-control"
+                                            name="TUsuario[Senha]" autocomplete="new-password"> </div> <label
+                                        class="control-label col-sm-1" data-l="ConfirmaSenha"></label>
+                                    <div class="col-sm-4"> <input type="password" class="form-control"
+                                            name="TUsuario[ConfirmaSenha]" autocomplete="new-password"> </div>
+                                </div>
+                                <div class="form-group"> <label class="control-label col-sm-2" data-l="Email"></label>
+                                    <div class="col-sm-4"> <input type="text" class="form-control"
+                                            name="TUsuario[Email]" disabled="disabled" required=""> </div> <label
+                                        class="control-label col-sm-1" data-l="Idioma"></label>
+                                    <div class="col-sm-4"> <select class="form-control" name="TUsuario[Idioma]"
+                                            required="">
+                                            <option value="pt_br" data-l="PtBr" selected="selected"></option>
+                                            <option value="pt" data-l="Portugues"></option>
+                                            <option value="en_us" data-l="EnUs"></option>
+                                            <option value="es_es" data-l="EsEs"></option>
+                                            <option value="de" data-l="Alemao"></option>
+                                            <option value="it" data-l="Italiano"></option>
+                                            <option value="ru" data-l="Russo"></option>
+                                            <option value="fr" data-l="Frances"></option>
+                                            <option value="ja" data-l="Japones"></option>
+                                            <option value="zh" data-l="Chines"></option>
+                                            <option value="hi" data-l="Hindi"></option>
+                                            <option value="ar" data-l="Arabe"></option>
+                                            <option value="bn" data-l="Bengali"></option>
+                                        </select> </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" data-l="Alerta"></div>
+                                    <div class="panel-body">
+                                        <div class="form-group"> <label class="control-label col-sm-1"></label>
+                                            <div class="col-sm-11"> <label class="checkbox-inline"> <input
+                                                        type="checkbox" name="TUsuario[EmailSuporteAtivo]"
+                                                        data-ms="ei"><span data-l="EmailSuporteAtivo"></span> </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"> <label class="control-label col-sm-1"></label>
+                                            <div class="col-sm-11"> <label class="checkbox-inline"> <input
+                                                        type="checkbox" name="TUsuario[SatisfacaoEmailAtivo]"
+                                                        data-ms="ei"><span data-l="SatisfacaoEmailAtivo"></span>
+                                                </label> </div>
+                                        </div>
+                                        <div class="form-group"> <label class="control-label col-sm-1"></label>
+                                            <div class="col-sm-11"> <label class="checkbox-inline"> <input
+                                                        type="checkbox" name="TUsuario[NotificacaoAtivo]"
+                                                        data-ms="ei"><span data-l="NotificacaoAtivo"></span> </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"> <label class="control-label col-sm-1"></label>
+                                            <div class="col-sm-11"> <label class="checkbox-inline"> <input
+                                                        type="checkbox" name="TUsuario[Aberfecmail]" data-ms="ei"><span
+                                                        data-l="RecAberfecmail"></span> </label> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide" id="AtualizaIdiomaUsu"></div>
+                            </form>
+                            <div class="MsgModal"> </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button"
+                                            class="btn btn-primary btn-lg btn-sm Salvar" data-tm="Usuarios"
+                                            data-ag="false" data-l="Salvar" data-toggle="tooltip"
+                                            data-placement="auto top" title="(Ctrl+Enter)"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalControleOperador" tabindex="-1" role="dialog"
+                aria-labelledby="ModalLabelControleOperador" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalLabelControleOperador" data-l="EditarMeusDados"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="MsgModal"> </div>
+                            <div role="tabpanel">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active" data-toggle="tooltip"
+                                        data-placement="auto top" title="Geral" data-ltooltip="Nao"> <a
+                                            href="#Aba1ControleOperador" aria-controls="Aba1ControleOperador" role="tab"
+                                            data-toggle="tab" data-ad="true"> <span
+                                                class="glyphicon glyphicon-book"></span> </a> </li>
+                                    <li role="presentation" data-toggle="tooltip" data-placement="auto top"
+                                        title="PodioGame" data-ltooltip="Nao"> <a href="#Aba2ControleOperador"
+                                            aria-controls="Aba2ControleOperador" role="tab" data-toggle="tab"> <span
+                                                class="fa fa-gamepad"></span></a> </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="Aba1ControleOperador">
+                                    <form class="form-horizontal Pt10" role="form" method="PUT"
+                                        data-bitwarden-watching="1">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" data-l="Geral"></div>
+                                            <div class="panel-body">
+                                                <div id="ControleOperador" class="hide"></div> <input type="hidden"
+                                                    class="form-control" name="TOperador[Chave]"> <input type="hidden"
+                                                    class="form-control" name="TOperador[MudarSenhaAtivo]" value="N"
+                                                    disabled="disabled"> <input type="hidden" class="form-control"
+                                                    name="TOperador[IdiomaAtual]"> <input type="hidden"
+                                                    class="form-control" name="TOperador[PerGameAtual]"
+                                                    disabled="disabled">
+                                                <div class="form-group"> <label class="control-label col-sm-2"
+                                                        data-l="Nome"></label>
+                                                    <div class="col-sm-4"> <input type="text" class="form-control"
+                                                            name="TOperador[Nome]" maxlength="100" required=""> </div>
+                                                    <label class="control-label col-sm-1" data-l="Sobrenome"></label>
+                                                    <div class="col-sm-4"> <input type="text" class="form-control"
+                                                            name="TOperador[Sobrenome]" maxlength="200"> </div>
+                                                </div>
+                                                <div class="form-group"> <label class="control-label col-sm-2"
+                                                        data-l="Telefone"></label>
+                                                    <div class="col-sm-4"> <input type="text" class="form-control"
+                                                            name="TOperador[Telefone]"> </div> <label
+                                                        class="control-label col-sm-1" data-l="Celular"></label>
+                                                    <div class="col-sm-4"> <input type="text" class="form-control"
+                                                            name="TOperador[Celular]"> </div>
+                                                </div>
+                                                <div class="form-group"> <label class="control-label col-sm-2"
+                                                        data-l="Ramal"></label>
+                                                    <div class="col-sm-2"> <input type="text" class="form-control"
+                                                            name="TOperador[Ramal]"> </div> <label
+                                                        class="control-label col-sm-3" data-l="SMS"></label>
+                                                    <div class="col-sm-4"> <input type="text" class="form-control"
+                                                            name="TOperador[Sms]"> </div>
+                                                </div>
+                                                <div class="form-group"> <label class="control-label col-sm-2"
+                                                        data-l="Senha"></label>
+                                                    <div class="col-sm-4"> <input type="password" class="form-control"
+                                                            name="TOperador[Senha]" autocomplete="new-password"> </div>
+                                                    <label class="control-label col-sm-1"
+                                                        data-l="ConfirmaSenha"></label>
+                                                    <div class="col-sm-4"> <input type="password" class="form-control"
+                                                            name="TOperador[ConfirmaSenha]" autocomplete="new-password">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group"> <label class="control-label col-sm-2"
+                                                        data-l="Email"></label>
+                                                    <div class="col-sm-4"> <input type="text" class="form-control"
+                                                            name="TOperador[Email]" disabled="disabled" required="">
+                                                    </div> <label class="control-label col-sm-1"
+                                                        data-l="Idioma"></label>
+                                                    <div class="col-sm-4"> <select class="form-control"
+                                                            name="TOperador[Idioma]">
+                                                            <option value="pt_br" data-l="PtBr" selected="selected">
+                                                            </option>
+                                                            <option value="pt" data-l="Portugues"></option>
+                                                            <option value="en_us" data-l="EnUs"></option>
+                                                            <option value="es_es" data-l="EsEs"></option>
+                                                            <option value="de" data-l="Alemao"></option>
+                                                            <option value="it" data-l="Italiano"></option>
+                                                            <option value="ru" data-l="Russo"></option>
+                                                            <option value="fr" data-l="Frances"></option>
+                                                            <option value="ja" data-l="Japones"></option>
+                                                            <option value="zh" data-l="Chines"></option>
+                                                            <option value="hi" data-l="Hindi"></option>
+                                                            <option value="ar" data-l="Arabe"></option>
+                                                            <option value="bn" data-l="Bengali"></option>
+                                                        </select> </div>
+                                                </div>
+                                                <div class="form-group"> <label class="control-label col-sm-2"></label>
+                                                    <div class="col-sm-10"> <label class="checkbox-inline"> <input
+                                                                type="checkbox" name="TOperador[Mk]"><span
+                                                                data-l="Mk"></span>
+                                                            <div data-h="DeskSuporte"></div>
+                                                        </label> </div>
+                                                </div>
+                                                <div class="hide" id="AtualizaIdiomaOp"></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="Aba2ControleOperador">
+                                    <form class="form-horizontal Pt10" role="form" method="PUT">
+                                        <div class="alert alert-success" role="alert"> <span
+                                                class="fa fa-exclamation-circle"></span> <span
+                                                data-l="PodioSelectHelp"></span> </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" data-l="SelecaoPersonagem"></div>
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    <div class="col-sm-3"> <label class="radio-inline"> <input
+                                                                type="radio" name="TOperador[PerGame]" value="0"
+                                                                checked="checked">
+                                                            <div class="badge bg-primary text-wrap"
+                                                                style="font-size:2rem;"> <span
+                                                                    data-l="Aleatorio"></span> </div>
+                                                        </label> </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-3"> <label class="radio-inline"> <input
+                                                                type="radio" name="TOperador[PerGame]" value="1"> <span>
+                                                                <img src="abbott-portal_files/GameP3_v1.png"
+                                                                    height="100">
+                                                                <figcaption data-l="ShiroArq"></figcaption>
+                                                            </span> </label> </div>
+                                                    <div class="col-sm-3"> <label class="radio-inline"> <input
+                                                                type="radio" name="TOperador[PerGame]" value="2"> <span>
+                                                                <img src="abbott-portal_files/GameP1_v1.png"
+                                                                    height="100">
+                                                                <figcaption data-l="DravosGue"></figcaption>
+                                                            </span> </label> </div>
+                                                    <div class="col-sm-3"> <label class="radio-inline"> <input
+                                                                type="radio" name="TOperador[PerGame]" value="3"> <span>
+                                                                <img src="abbott-portal_files/GameP2_v1.png"
+                                                                    height="100">
+                                                                <figcaption data-l="MelMag"></figcaption>
+                                                            </span> </label> </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-3"> <label class="radio-inline"> <input
+                                                                type="radio" name="TOperador[PerGame]" value="4"> <span>
+                                                                <img src="abbott-portal_files/GameP6_v1.png"
+                                                                    height="100">
+                                                                <figcaption data-l="DarlaBarb"></figcaption>
+                                                            </span> </label> </div>
+                                                    <div class="col-sm-3"> <label class="radio-inline"> <input
+                                                                type="radio" name="TOperador[PerGame]" value="5"> <span>
+                                                                <img src="abbott-portal_files/GameP4_v1.png"
+                                                                    height="100">
+                                                                <figcaption data-l="AvanaAlq"></figcaption>
+                                                            </span> </label> </div>
+                                                    <div class="col-sm-3"> <label class="radio-inline"> <input
+                                                                type="radio" name="TOperador[PerGame]" value="6"> <span>
+                                                                <img src="abbott-portal_files/GameP5_v1.png"
+                                                                    height="100">
+                                                                <figcaption data-l="TomBard"></figcaption>
+                                                            </span> </label> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="MsgModal"> </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button"
+                                            class="btn btn-primary btn-lg btn-sm Salvar" data-tm="Operadores/meusdados"
+                                            data-ag="false" data-l="Salvar" data-toggle="tooltip"
+                                            data-placement="auto top" title="(Ctrl+Enter)"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalConfirmacao" data-e="Confirmar" tabindex="-1" role="dialog"
+                aria-labelledby="ModalConfirmacaoLabel" aria-hidden="true" data-keyboard="true" data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalConfirmacaoLabel"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="MsgModal"></div> <span id="ConfirmacaoDeseja"></span>? <div
+                                id="ConfirmacaoTotal"></div>
+                            <form class="form-horizontal" role="form"></form>
+                            <div class="hide" id="Permanentemente"> <br><input type="text" class="form-control"
+                                    name="Permanentemente" style="width:220px;"> <small></small> </div>
+                            <div class="MsgModal"> </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <input type="hidden" name="Tipo"> <button type="button"
+                                            class="btn btn-danger btn-lg btn-sm" data-dismiss="modal" data-l="Nao"
+                                            data-toggle="tooltip" data-placement="auto top" title="(Esc)"></button>
+                                        <button type="button" class="btn btn-success btn-lg btn-sm Confirmar"
+                                            data-l="Sim" data-toggle="tooltip" data-placement="auto top"
+                                            title="(Ctrl+Enter)"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalConfirmarFechar" data-e="FecharModalTrue" tabindex="-1" role="dialog"
+                aria-labelledby="ModalConfirmarFecharLabel" aria-hidden="true" data-keyboard="true"
+                data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalConfirmarFecharLabel"> <span data-l="Fechar"></span> <span
+                                    data-l="Formulario"></span> </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-horizontal Pt10" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <span data-l="AlertaFecharFormulario"></span> </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <label class="checkbox-inline"> <input type="checkbox"
+                                                name="NaoPerguntarNovamente"> <small
+                                                data-l="NaoPerguntarNovamente"></small> </label> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <input type="hidden" name="Modal"> <button type="button"
+                                            class="btn btn-danger" data-dismiss="modal" data-toggle="tooltip"
+                                            data-placement="auto top" title="(Esc)"> <span data-l="Nao"></span> <span
+                                                data-l="Fechar"></span> </button> <button type="button"
+                                            class="btn btn-danger FecharModalTrue" data-l="FSS"></button> <button
+                                            type="button" class="btn btn-success FecharModalSalvar" data-dismiss="modal"
+                                            data-l="FES"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalConfirmarPonto" data-e="FecharModalTrue" tabindex="-1" role="dialog"
+                aria-labelledby="ModalConfirmarPontoLabel" aria-hidden="true" data-keyboard="true"
+                data-backdrop="static">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalConfirmarPontoLabel" data-l="Ponto"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-horizontal Pt10" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <span data-l="RegistrarHora"></span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <input type="hidden" name="Modal"> <button type="button"
+                                            class="btn btn-danger btn-lg btn-sm" data-dismiss="modal" data-l="Nao"
+                                            data-toggle="tooltip" data-placement="auto top" title="(Esc)"></button>
+                                        <button type="button" class="btn btn-success btn-lg btn-sm PontoModalTrue"
+                                            data-l="Sim" data-toggle="tooltip" data-placement="auto top"
+                                            title="(Ctrl+Enter)"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalExportar" data-e="Enviar" tabindex="-1" role="dialog"
+                aria-labelledby="ModalExportarLabel" aria-hidden="true" data-keyboard="true" data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalExportarLabel"> <span data-l="Exportar"></span>
+                                <span></span>
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="MsgModal"> </div>
+                            <div role="tabpanel">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active" data-toggle="tooltip"
+                                        data-placement="auto top" title="Exportar" data-ltooltip="Nao"> <a
+                                            href="#Aba1Exportar" aria-controls="Aba1Exportar" role="tab"
+                                            data-toggle="tab" data-ad="true"> <span
+                                                class="glyphicon glyphicon-book"></span> </a> </li>
+                                    <li role="presentation" class="tabLogGenerico" data-toggle="tooltip"
+                                        data-placement="auto top" title="Log" data-ltooltip="Nao" data-lc=""> <a
+                                            href="#Aba2Exportar" aria-controls="Aba2Exportar" role="tab"
+                                            data-toggle="tab"> <span class="fa fa-history"></span> </a> </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="Aba1Exportar">
+                                    <form class="form-horizontal Pt10" role="form" method="POST"> <input type="text"
+                                            class="hide chaveLogGenerico" id="ChaveExportar" data-cg="1"> <input
+                                            type="hidden" name="Item" value="Exp">
+                                        <div class="alert alert-success" role="alert"> <strong
+                                                data-l="Atencao"></strong> <span></span> </div> <label
+                                            class="checkbox-inline"> <input type="checkbox" name="MarcarTodos"
+                                                checked="checked"> <span><b data-l="MarcarTodos"></b></span> </label>
+                                        <br>
+                                        <div id="ModalExportarBody"></div>
+                                        <div class="MsgModal"> </div>
+                                    </form>
+                                </div>
+                                <div role="tabpanel" class="tab-pane Pt10 fade tabPanelLogGenerico" id="Aba2Exportar">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" data-l="Log"></div>
+                                            <div class="panel-body">
+                                                <div id="PanelLogExportar">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-hover table-striped">
+                                                            <thead class="TheadC"></thead>
+                                                            <tbody class="TbodyC"></tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button"
+                                            class="btn btn-danger btn-lg btn-sm ConfirmarFechar" data-dismiss="modal"
+                                            data-l="Fechar" data-toggle="tooltip" data-placement="auto top"
+                                            title="(Esc)"></button> <button type="button"
+                                            class="btn btn-success btn-lg btn-sm Enviar" data-fbs="Exportar"
+                                            data-l="Exportar" data-toggle="tooltip" data-placement="auto top"
+                                            title="(Ctrl+Enter)"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalImportar" tabindex="-1" role="dialog" aria-labelledby="ModalImportarLabel"
+                aria-hidden="true" data-keyboard="true" data-backdrop="static">
+                <div class="modal-dialog modal-lg W90p">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ImportarodalLabel"> <span data-l="Importar"></span>
+                                <span></span>
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="MsgModal"> </div>
+                            <div class="alert alert-warning" role="alert"> <strong data-l="Atencao"></strong> <span
+                                    data-l="AtencaoImportacao"></span> </div>
+                            <div class="progress hide">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"> 0%
+                                </div>
+                            </div>
+                            <form class="form-horizontal" role="form" method="PUT">
+                                <div data-h="Importar"></div> <input type="hidden"> <textarea rows="15" cols="100%"
+                                    style="width:100%;font-family:monospace;" name="Planilha" required=""></textarea>
+                            </form>
+                            <div class="MsgModal"> </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button"
+                                            class="btn btn-success btn-lg btn-sm CancelarProcessarImportacao hide"
+                                            data-l="Cancelar"></button> <button type="button"
+                                            class="btn btn-danger btn-lg btn-sm" data-dismiss="modal" data-l="Fechar"
+                                            data-toggle="tooltip" data-placement="auto top" title="(Esc)"></button>
+                                        <button type="button"
+                                            class="btn btn-success btn-lg btn-sm CancelarPrepararImportacao hide"
+                                            data-toggle="tooltip" data-placement="auto top" title="Voltar"
+                                            data-ltooltip="Nao"> <span class="fa fa-undo"></span> </button> <button
+                                            type="button" class="btn btn-success btn-lg btn-sm PrepararImportacao"
+                                            data-toggle="tooltip" data-placement="auto top" title="Preparar"
+                                            data-ltooltip="Nao"> <span class="fa fa-magic"></span> </button> <button
+                                            type="button" class="btn btn-success btn-lg btn-sm ProcessarImportacao"
+                                            data-l="Importar" disabled="disabled"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalCaptchaCnpj" data-e="Enviar" tabindex="-1" role="dialog"
+                aria-labelledby="ModalLabelCaptchaCnpj" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalLabelCaptchaCnpj" data-l="ConsultarCNPJ"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="MsgModal"> </div>
+                            <div class="alert alert-warning" role="alert"> <strong data-l="Atencao"></strong> <span
+                                    data-l="AtencaoCnpj"></span> </div>
+                            <form class="form-horizontal Pt10" role="form" method="POST"> <input type="hidden"
+                                    name="Entidade"> <input type="hidden" name="Chave">
+                                <div class="form-group"> <label class="control-label col-sm-2" data-l="Cnpj"></label>
+                                    <div class="col-sm-5"> <input type="text" class="form-control" name="Cnpj"
+                                            data-mc="Cnpj" required=""> </div>
+                                </div>
+                                <div class="form-group"> <label class="control-label col-sm-2"></label>
+                                    <div class="col-sm-4" data-h="captcha"></div>
+                                    <div class="col-sm-2"> <button type="button" class="btn btn-info aCaptchaCnpj">
+                                            <span class="glyphicon glyphicon-refresh"></span> </button> </div>
+                                </div>
+                                <div class="form-group"> <label class="control-label col-sm-2" data-l="Captcha"></label>
+                                    <div class="col-sm-3"> <input type="text" class="form-control" name="Captcha"
+                                            required=""> </div>
+                                </div>
+                            </form>
+                            <div class="MsgModal"> </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button" class="btn btn-default btn-lg btn-sm"
+                                            data-dismiss="modal" data-l="Fechar"></button> <button type="button"
+                                            class="btn btn-primary btn-lg btn-sm Enviar" data-tm="cnpj"
+                                            data-l="Consultar" data-toggle="tooltip" data-placement="auto top"
+                                            title="(Ctrl+Enter)"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="ModalVisualizarArquivo" tabindex="-1" role="dialog"
+                aria-labelledby="ModalLabelVisualizarArquivo" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog modal-lg W90p">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalLabelVisualizarArquivo"><span></span></h4>
+                        </div>
+                        <div class="modal-body Oa H550"></div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <input type="hidden" name="File"> <span
+                                            class="BaixarArquivo"></span> <button type="button"
+                                            class="btn btn-info AnteriorArquivo" disabled="disabled"><span
+                                                class="glyphicon glyphicon-triangle-left"></span></button> <button
+                                            type="button" class="btn btn-info ProximoArquivo" disabled="disabled"><span
+                                                class="glyphicon glyphicon-triangle-right"></span></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalTeclasAtalho" tabindex="-1" role="dialog"
+                aria-labelledby="ModalTeclasAtalhoLabel" aria-hidden="true" data-keyboard="true" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalTeclasAtalhoLabel" data-l="TeclasAtalho"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-horizontal Pt10" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>a</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclaaTxt"></small> </div>
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>Shift</strong></span> <span
+                                            class="label label-default"><strong>a</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclaATxt"></small> </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>c</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclacTxt"></small> </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>d</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TecladTxt"></small> </div>
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>Shift</strong></span> <span
+                                            class="label label-default"><strong>d</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclaDTxt"></small> </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>e</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclaeTxt"></small> </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>j</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclajTxt"></small> </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>k</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclakTxt"></small> </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>m</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclamTxt"></small> </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>n</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclanTxt"></small> </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>u</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclauTxt"></small> </div>
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>Shift</strong></span> <span
+                                            class="label label-default"><strong>u</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclaUTxt"></small> </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>/</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclaBarra1Txt"></small> </div>
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>Shift</strong></span> <span
+                                            class="label label-default"><strong>/</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclasAtalho"></small> </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-2 text-right"> <span
+                                            class="label label-default"><strong>Esc</strong></span> </div>
+                                    <div class="col-sm-4"> <small data-l="TeclaEscTxt"></small> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button" class="btn btn-default btn-lg btn-sm"
+                                            data-dismiss="modal" data-l="Fechar"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalBlocoNotas" data-e="Salvar" tabindex="-1" role="dialog"
+                aria-labelledby="ModalBlocoNotasLabel" aria-hidden="true" data-keyboard="true" data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalBlocoNotasLabel" data-l="BlocoNotas"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="MsgModal"> </div>
+                            <form class="form-horizontal" role="form" method="PUT">
+                                <div id="BlocoNotas" class="hide"></div>
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <textarea class="form-control" name="TOperador[BlocoNotas]"
+                                            rows="8" maxlength="500"></textarea> </div>
+                                </div>
+                            </form>
+                            <div class="MsgModal"> </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button" class="btn btn-danger btn-lg btn-sm"
+                                            data-dismiss="modal" data-l="Fechar"></button> <button type="button"
+                                            class="btn btn-primary btn-lg btn-sm Salvar" data-tm="Operadores/bloconotas"
+                                            data-ag="false" data-l="Salvar" data-toggle="tooltip"
+                                            data-placement="auto top" title="(Ctrl+Enter)"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalMatrizPrioridade" data-e="Salvar" tabindex="-1" role="dialog"
+                aria-labelledby="ModalMatrizPrioridadeLabel" aria-hidden="true" data-keyboard="true"
+                data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalMatrizPrioridadeLabel" data-l="MatrizPrioridade"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group"> <img src="abbott-portal_files/matrizprioridade_v1.png"
+                                    style="display:block; margin-left:auto; margin-right:auto;"> </div>
+                            <div class="MsgModal"> </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button" class="btn btn-danger btn-lg btn-sm"
+                                            data-dismiss="modal" data-l="Fechar"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalDetalhesMensagem" tabindex="-1" role="dialog"
+                aria-labelledby="ModalDetalhesMensagemLabel" aria-hidden="true" data-keyboard="true"
+                data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalDetalhesMensagemLabel" data-l="DetalhesMensagem"></h4>
+                        </div>
+                        <div class="modal-body Wbba"></div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <input type="hidden" name="Modal"> <button type="button"
+                                            class="btn btn-danger btn-lg btn-sm" data-dismiss="modal" data-l="Fechar"
+                                            data-toggle="tooltip" data-placement="auto top" title="(Esc)"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalCalculadora" data-e="Salvar" tabindex="-1" role="dialog"
+                aria-labelledby="ModalCalculadoraLabel" aria-hidden="true" data-keyboard="true" data-backdrop="static">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalCalculadoraLabel" data-l="Calculadora"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="MsgModal"> </div>
+                            <form class="form-horizontal text-center" role="form" method="PUT">
+                                <div id="Calculadora" class="hide"></div> <input type="tel"
+                                    class="text-right W186 H40 M2"> <br> <button type="button"
+                                    class="btn btn-warning W40 M2"> <span>C</span> </button> <button type="button"
+                                    class="btn btn-warning W40 M2"> <span>+-</span> </button> <button type="button"
+                                    class="btn btn-warning W40 M2"> <span>%</span> </button> <button type="button"
+                                    class="btn btn-warning W40 M2"> <span>/</span> </button> <br> <button type="button"
+                                    class="btn btn-info W40 M2"> <span>7</span> </button> <button type="button"
+                                    class="btn btn-info W40 M2"> <span>8</span> </button> <button type="button"
+                                    class="btn btn-info W40 M2"> <span>9</span> </button> <button type="button"
+                                    class="btn btn-warning W40 M2"> <span>x</span> </button> <br> <button type="button"
+                                    class="btn btn-info W40 M2"> <span>4</span> </button> <button type="button"
+                                    class="btn btn-info W40 M2"> <span>5</span> </button> <button type="button"
+                                    class="btn btn-info W40 M2"> <span>6</span> </button> <button type="button"
+                                    class="btn btn-warning W40 M2"> <span>-</span> </button> <br> <button type="button"
+                                    class="btn btn-info W40 M2"> <span>1</span> </button> <button type="button"
+                                    class="btn btn-info W40 M2"> <span>2</span> </button> <button type="button"
+                                    class="btn btn-info W40 M2"> <span>3</span> </button> <button type="button"
+                                    class="btn btn-warning W40 M2"> <span>+</span> </button> <br> <button type="button"
+                                    class="btn btn-info W40 M2"> <span>0</span> </button> <button type="button"
+                                    class="btn btn-info W40 M2"> <span>.</span> </button> <button type="button"
+                                    class="btn btn-success W40 M2"> <span>=</span> </button>
+                            </form>
+                            <div class="MsgModal"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalGerarSenha" tabindex="-1" role="dialog" aria-labelledby="ModalLabelGerarSenha"
+                aria-hidden="true" data-keyboard="true" data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"> <span aria-hidden="true">X</span> </button>
+                            <h4 class="modal-title" id="ModalLabelGerarSenha"><span></span></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-horizontal Pt10" role="form"> <input type="hidden" class="form-control"
+                                    name="Modal">
+                                <div class="form-group"> <label class="control-label col-sm-2" data-l="Senha"></label>
+                                    <div class="col-sm-6">
+                                        <div class="input-group"> <input type="text" class="form-control" name="Senha"
+                                                maxlength="15">
+                                            <div class="input-group-btn"> <button type="button"
+                                                    class="btn btn-default GerarSenha"> <span
+                                                        class="glyphicon glyphicon-refresh"> </span> </button> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button"
+                                            class="btn btn-primary btn-lg btn-sm UsarSenhaGerada" data-dismiss="modal"
+                                            data-l="Usar"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ModalLogGenerico"> <input type="hidden" name="TLog[Data]" data-cg="1" data-ocg="false"> <input
+                    type="hidden" name="TLog[Hora]" data-cg="2" data-ocg="false"> <input type="hidden"
+                    name="TLog[Responsavel]" data-cg="3" data-ocg="false"> <input type="hidden" name="TLog[IP]"
+                    data-cg="4" data-ocg="false"> <input type="hidden" name="TLog[Acao]" data-cg="5" data-ocg="false">
+                <input type="hidden" name="TLog[Descricao]" data-cg="6" data-ocg="false" data-fcg="LogDescricao">
+            </div>
+            <div id="ModalLogGenericoExp"> <input type="hidden" name="TLog[Data]" data-cg="1" data-ocg="false"> <input
+                    type="hidden" name="TLog[Hora]" data-cg="2" data-ocg="false"> <input type="hidden"
+                    name="TLog[Responsavel]" data-cg="3" data-ocg="false"> <input type="hidden"
+                    name="TLog[QtdRegistros]" data-cg="4" data-ocg="false"> <input type="hidden" name="TLog[IP]"
+                    data-cg="5" data-ocg="false"> <input type="hidden" name="TLog[Acao]" data-cg="6" data-ocg="false">
+            </div>
+            <div id="BotoesGridPadrao" class="hide" style="display:none;">
+                <div class="form-horizontal" role="form">
+                    <div class="form-group Mb8">
+                        <div class="col-sm-12" data-h="botoesBase"> <button type="button"
+                                class="btn btn-info btn-sm aGrid" data-toggle="tooltip" data-placement="auto top"
+                                title="Atualizar" data-ltooltip="Nao"> <span
+                                    class="fa fa-refresh fa-spin iAtualiza"></span> </button> <button type="button"
+                                class="btn btn-default btn-sm" disabled="disabled"> <span class="Total">0/0</span><span
+                                    class="TotalSelected"></span> </button> <button type="button"
+                                class="btn btn-danger btn-lg hide Excluir Pf Zi3 R142 B2vh Br50" value="Excluir"> <span
+                                    class="glyphicon glyphicon-trash"></span> </button> <button type="button"
+                                class="btn btn-primary btn-lg hide Ativar Pf Zi3 R78 B2vh Br50" value="Ativar"> <span
+                                    class="glyphicon glyphicon-remove"></span> </button> <button type="button"
+                                class="btn btn-success btn-lg Criar Pf Zi3 R14 B2vh Br50"> <span
+                                    class="glyphicon glyphicon-plus"></span> </button> </div>
+                    </div>
+                    <div data-h="contextMenu" class="dropdown clearfix"></div>
+                </div>
+            </div>
+            <div id="FormPesquisaGridPadrao" class="hide" style="display:none;">
+                <div class="form-horizontal pRapidaGrid" role="form">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="input-group"> <input type="text" class="form-control input-sm"
+                                    placeholder="Pesquisa" data-lph="Nao" name="Pesquisa" data-e="aGrid">
+                                <div class="input-group-btn Zi2"> <button type="button"
+                                        class="btn btn-default btn-sm aGrid" data-toggle="tooltip"
+                                        data-placement="auto top" title="Pesquisar" data-ltooltip="Nao"> <span
+                                            class="glyphicon glyphicon-search"></span> </button> <button type="button"
+                                        class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                        aria-expanded="false"> <span class="caret"></span> <span class="sr-only">Toggle
+                                            Dropdown</span> </button>
+                                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <div class="form-horizontal" role="form">
+                                            <div data-h="menuAdicional"></div>
+                                            <div> <label class="control-label col-sm-1"></label>
+                                                <div class="col-sm-11"> <label class="radio-inline"> <input type="radio"
+                                                            name="Ativo" value="1" class="aGrid"><span
+                                                            data-l="Ativos"></span> </label> </div>
+                                            </div>
+                                            <div> <label class="control-label col-sm-1"></label>
+                                                <div class="col-sm-11"> <label class="radio-inline"> <input type="radio"
+                                                            name="Ativo" value="0" class="aGrid"><span
+                                                            data-l="NaoAtivos"></span> </label> </div>
+                                            </div>
+                                            <div> <label class="control-label col-sm-1"></label>
+                                                <div class="col-sm-11"> <label class="radio-inline Exportar"> <span
+                                                            data-l="Exportar"></span> </label> </div>
+                                            </div>
+                                            <div> <label class="control-label col-sm-1"></label>
+                                                <div class="col-sm-11 Pb10"> <label class="radio-inline Importar"> <span
+                                                            data-l="Importar"></span> </label> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalListaMultiplo" data-e="Aplicar" tabindex="-1" role="dialog"
+                aria-labelledby="ModalLabelListaMultiplo" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"> <span aria-hidden="true">X</span> </button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body"> <input type="text" class="form-control" name="PLGridModal"
+                                placeholder="Pesquisar" data-lph="Nao">
+                            <form class="form-horizontal Pt10" role="form"></form>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button"
+                                            class="btn btn-primary btn-lg btn-sm Aplicar" data-dismiss="modal"
+                                            data-l="Aplicar"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalListaAddTags" data-e="Aplicar" tabindex="-1" role="dialog"
+                aria-labelledby="ModalLabelListaAddTags" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"> <span aria-hidden="true">X</span> </button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal Pt10" role="form"> <input type="hidden" name="Modal"> <input
+                                    type="hidden" name="Campo"> <textarea rows="15" cols="100%" style="width:100%;"
+                                    name="Tags" required=""></textarea> </form>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button"
+                                            class="btn btn-primary btn-lg btn-sm Aplicar" data-dismiss="modal"
+                                            data-l="Aplicar"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalMIRelatorios" tabindex="-1" role="dialog"
+                aria-labelledby="ModalMIRelatoriosFecharLabel" aria-hidden="true" data-keyboard="true"
+                data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title">Icones</h4>
+                        </div>
+                        <div class="modal-body"> <input type="hidden" name="Origem">
+                            <div class="form-horizontal Pt10" role="form"> </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <input type="hidden" name="Modal"> <button type="button"
+                                            class="btn btn-default btn-lg btn-sm" data-dismiss="modal" data-l="Fechar"
+                                            data-toggle="tooltip" data-placement="auto top" title="(Esc)"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalDARelatorios" tabindex="-1" role="dialog"
+                aria-labelledby="ModalDARelatoriosFecharLabel" aria-hidden="true" data-keyboard="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-horizontal" role="form"></div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <input type="hidden" name="Modal"> <button type="button"
+                                            class="btn btn-default btn-lg btn-sm" data-dismiss="modal" data-l="Fechar"
+                                            data-toggle="tooltip" data-placement="auto top" title="(Esc)"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalTelefones" tabindex="-1" role="dialog" aria-labelledby="ModalTelefonesLabel"
+                aria-hidden="true" data-keyboard="true" data-backdrop="static">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalLabelTelefones"></h4>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button" class="btn btn-default btn-lg btn-sm"
+                                            data-dismiss="modal" data-l="Fechar"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="PaginacaoGridPadrao" class="hide">
+                <ul class="pager">
+                    <li> <button type="button" class="btn btn-info Mais" disabled="disabled"> <span
+                                class="glyphicon glyphicon-chevron-down"> </span> </button> </li>
+                </ul>
+            </div>
+            <div id="MsgAlertaOffline" class="hide">
+                <div class="alert alert-warning alert-dismissible" role="alert"></div>
+            </div>
+            <div id="MsgSucesso" class="hide">
+                <div class="alert alert-success alert-dismissible fade in Pf Zi2031 L8 B0vh R7" role="alert"> <button
+                        type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">×</span></button> <strong></strong> </div>
+            </div>
+            <div id="MsgFalha" class="hide">
+                <div class="alert alert-danger alert-dismissible fade in Pf Zi2031 L8 B0vh R7" role="alert"> <button
+                        type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">×</span></button> <strong></strong> </div>
+            </div>
+            <div id="MsgAlerta" class="hide">
+                <div class="alert alert-warning alert-dismissible fade in Pf Zi2031 L8 B0vh R7 laranja" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">×</span></button> <strong></strong>
+                </div>
+            </div>
+            <div id="MsgSucessoModal" class="hide">
+                <div class="alert alert-success alert-dismissible fade in" role="alert"> <button type="button"
+                        class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <strong></strong>
+                </div>
+            </div>
+            <div id="MsgAlertaModal" class="hide">
+                <div class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button"
+                        class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <strong></strong>
+                </div>
+            </div>
+            <div id="MsgFalhaModal" class="hide">
+                <div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button"
+                        class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <strong></strong>
+                </div>
+            </div>
+            <div id="TriggerAP"></div>
+            <div id="FiltroDataEscolha"> <span class="input-group-btn hide" data-h="btnFiltro"> <button type="button"
+                        class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <span
+                            class="fa fa-gear"></span> <span class="text-filtro"></span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu list-group"></ul>
+                </span> </div>
+            <div id="WebPhone" class="hide" style="display:none;">
+                <div class="panel-heading" draggable="true">
+                    <div class="row">
+                        <div class="col-xs-3"> <i class="fa fa-stop-circle fa-5x Cp" onclick="desligaChamada()"
+                                data-toggle="tooltip" data-placement="auto left" title="Desligar"
+                                data-ltooltip="Nao"></i> </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"></div>
+                            <div data-h="Info"></div> <i class="fa fa-microphone Cp hide" aria-hidden="true"
+                                onclick="mute();" data-toggle="tooltip" data-placement="auto right" title="Mutar"
+                                data-ltooltip="Nao"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="widget-evoline-api-container"></div>
+            </div>
+            <div class="modal" id="ModalFinanceiro" data-e="Salvar" tabindex="-1" role="dialog"
+                aria-labelledby="ModalLabelPrioridade" aria-hidden="true" data-keyboard="true" data-backdrop="static">
+                <div class="modal-dialog modal-lg W90p">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"> <span aria-hidden="true">X</span> </button>
+                            <h4 class="modal-title" id="ModalLabelFinanceiro">Financeiro <small class="Fs60p"></small>
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="MsgModal"> </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Faturas em Aberto</div>
+                                <div class="panel-body" style="padding: 15px;">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-striped">
+                                            <thead class="TheadC">
+                                                <tr>
+                                                    <th>Vencimento</th>
+                                                    <th>Último Recebimento</th>
+                                                    <th>Valor</th>
+                                                    <th>Dias de Atraso</th>
+                                                    <th>Linha Digitável</th>
+                                                    <th>Link Pagamento</th>
+                                                    <th>Link NFS-e</th>
+                                                    <th>Número da Nota</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="TbodyC"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-group" id="accordion1Financeiro" role="tablist"
+                                aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="heading1Financeiro">
+                                        <h4 class="panel-title"> <a data-toggle="collapse"
+                                                data-parent="#accordion1Financeiro" href="#collapse1Financeiro"
+                                                aria-expanded="true" aria-controls="collapse1Financeiro">Histórico de
+                                                Faturas Quitadas</a> </h4>
+                                    </div>
+                                    <div id="collapse1Financeiro" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="heading1Financeiro">
+                                        <div class="panel-body" style="padding: 15px;">
+                                            <div class="table-responsive">
+                                                <table class="table table-hover table-striped">
+                                                    <thead class="TheadC">
+                                                        <tr>
+                                                            <th>Vencimento</th>
+                                                            <th>Último Recebimento</th>
+                                                            <th>Valor</th>
+                                                            <th>Dias de Atraso</th>
+                                                            <th>Link NFS-e</th>
+                                                            <th>Número da Nota</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="TbodyC"></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="MsgModal"> </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button" class="btn btn-default btn-lg btn-sm"
+                                            data-dismiss="modal" data-l="Fechar"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalConfirmarAlteraChaveBI" tabindex="-1" role="dialog"
+                aria-labelledby="ModalConfirmarAlteraChaveBI" aria-hidden="true" data-keyboard="true"
+                data-backdrop="static">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalConfirmarAlteraChaveBI"> <span
+                                    data-l="AlterarChavesBI"></span> </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-horizontal Pt10" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <span id="totalReg"></span> <span
+                                            data-l="AvisoUpdateMassa"></span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <input type="hidden" name="Modal"> <button type="button"
+                                            class="btn btn-danger btn-lg btn-sm" data-dismiss="modal" data-l="Nao"
+                                            data-toggle="tooltip" data-placement="auto top" title="(Esc)"></button>
+                                        <button type="button" class="btn btn-success btn-lg btn-sm FecharModalTrue"
+                                            data-l="Sim" data-toggle="tooltip" data-placement="auto top"
+                                            title="(Ctrl+Enter)"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="Modal2Conversas" tabindex="-1" role="dialog" aria-labelledby="ModalLabel2Conversas"
+                aria-hidden="true" data-keyboard="true" data-backdrop="static" data-ala="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"> <span aria-hidden="true">X</span> </button>
+                            <h4 class="modal-title" id="Modal2LabelConversas"> <span data-l="Visualizar"></span> <span
+                                    data-l="Imagem"></span></h4>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button"
+                                            class="btn btn-primary btn-lg btn-sm EnviarImagem SAzul"
+                                            data-toggle="tooltip" data-placement="auto top" title="(Ctrl+Enter)"><span
+                                                data-l="Enviar"></span> <span data-l="Imagem"></span></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="Modal3Conversas" tabindex="-1" role="dialog" aria-labelledby="ModalLabel3Conversas"
+                aria-hidden="true" data-keyboard="true" data-backdrop="static" data-ala="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"> <span aria-hidden="true">X</span> </button>
+                            <h4 class="modal-title" id="Modal3LabelConversas"> <span data-l="Gravar"></span> <span
+                                    data-l="Audio"></span></h4>
+                        </div>
+                        <div class="modal-body"> <select id="encodingTypeSelect" style="display:none;">
+                                <option value="mp3" selected="selected">MP3 (MPEG-1 Audio Layer III) (.mp3)</option>
+                            </select>
+                            <div id="formats" style="display:none;"></div>
+                            <pre id="log" style="display:none;"></pre>
+                            <div id="controls"> <button id="recordButton" class="btn btn-primary SAzul">Record</button>
+                                <button id="stopButton" class="btn btn-primary SAzul" disabled="disabled">Stop</button>
+                            </div> <br>
+                            <ol id="recordingsList" style="margin:0px;padding:0px;"></ol> <textarea id="recordingBase64"
+                                style="display:none;"></textarea>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button"
+                                            class="btn btn-primary btn-lg btn-sm EnviarAudio SAzul"
+                                            data-toggle="tooltip" data-placement="auto top" title="(Ctrl+Enter)"
+                                            id="EnviarAudio"><span data-l="Enviar"></span> <span
+                                                data-l="Audio"></span></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="Modal2Notificacoes" tabindex="-1" role="dialog"
+                aria-labelledby="ModalLabel2Notificacoes" aria-hidden="true" data-keyboard="true"
+                data-backdrop="static">
+                <div class="modal-dialog modal-lg W80p">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"> <span aria-hidden="true">X</span> </button>
+                            <h4 class="modal-title" id="ModalLabel2Notificacoes"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="MsgModal"> </div>
+                            <form class="form-horizontal Pt10" role="form" method="PUT"> <input class="hide"
+                                    name="TNotificacao[Assunto]" data-cg="2" data-fcg="ConcatSmall,Conteudo"
+                                    disabled="disabled"> <input class="hide" name="TNotificacao[DataHoraInicial]"
+                                    data-cg="3" data-fcg="ConcatSmallTraduzDataHoraPortal" data-fcm="TraduzDataHora"
+                                    disabled="disabled"> <input class="hide" name="TNotificacao[DataHoraFinal]"
+                                    data-cg="4" data-fcg="ConcatSmallTraduzDataHoraPortal" data-fcm="TraduzDataHora"
+                                    disabled="disabled">
+                                <div data-h="notificacaovisualizar"></div>
+                            </form>
+                            <div class="MsgModal"> </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button" class="btn btn-default btn-lg btn-sm"
+                                            data-dismiss="modal" data-l="Fechar" data-toggle="tooltip"
+                                            data-placement="auto top" title="(Esc)"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal Zi1050" id="ModalCFHomePortal" data-e="FMTHomePortal" tabindex="-1" role="dialog"
+                aria-labelledby="ModalCFHomePortalLabel" aria-hidden="true" data-keyboard="true" style="display: none;">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title=""
+                                data-ltooltip="Sim" data-original-title="Fechar (Esc)"><span
+                                    aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalCFHomePortalLabel"> <span data-l="NovoChamado">Novo
+                                    Chamado</span> </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-horizontal Pt10" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <span data-l="AlertaAbrirChamado">Deseja abrir um novo
+                                            Chamado?</span> </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <label class="checkbox-inline"> <input type="checkbox"
+                                                name="NaoPerguntarNovamente"> <small data-l="NaoPerguntarNovamente">Não
+                                                Perguntar Novamente</small> </label> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <input type="hidden" name="Modal"> <button type="button"
+                                            class="btn btn-danger btn-lg btn-sm FMTHomePortal" data-l="Nao"
+                                            data-toggle="tooltip" data-placement="auto top" title=""
+                                            data-original-title="(Esc)">Não</button> <button type="button"
+                                            class="btn btn-success btn-lg btn-sm FMTHomePortal" data-l="Sim"
+                                            data-toggle="tooltip" data-placement="auto top" title=""
+                                            data-original-title="(Ctrl+Enter)">Sim</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalDM01prompt" data-e="Salvar" tabindex="-1" role="dialog"
+                aria-labelledby="ModalLabelDM01prompt" aria-hidden="true" data-keyboard="true" data-backdrop="static">
+                <div class="modal-dialog" style="width:57%;">
+                    <div class="modal-content">
+                        <div class="modal-header"> <a type="button" class="btn btn-info2 btn-xs hidden-xs dAcademy"
+                                id="dUniversidade"> <span class="fa fa-graduation-cap"></span> Universidade </a> <button
+                                type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalLabelDM01prompt"><span></span> <span
+                                    data-l="DuvidasDesk"></span> <br><small data-l="SubInfoPergunta"></small></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="MsgModal"> </div> <textarea class="form-control" rows="10" cols="100%"
+                                style="width:100%;" name="Prompt"></textarea>
+                            <div class="MsgModal"> </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button"
+                                            class="btn btn-primary btn-lg btn-sm SAzul DM01prompt bgIA"
+                                            style="height:38px;"> <img src="abbott-portal_files/ia.png" width="16"
+                                                height="16" loading="lazy"> <span data-l="GRAIA"></span> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalDM01resp" data-e="Salvar" tabindex="-1" role="dialog"
+                aria-labelledby="ModalLabelDM01resp" aria-hidden="true" data-keyboard="true" data-backdrop="static">
+                <div class="modal-dialog modal-lg W80p">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalLabelDM01resp">DM-01 <span></span></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="AguardeIA" data-l="Aguarde"></div>
+                            <div class="RespIA"></div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button"
+                                            class="btn btn-primary btn-lg btn-sm SAzul DM01new"
+                                            data-l="NovaPergunta"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="ModalInsightsResp" data-e="Salvar" tabindex="-1" role="dialog"
+                aria-labelledby="ModalLabelInsightsResp" aria-hidden="true" data-keyboard="true" data-backdrop="static">
+                <div class="modal-dialog modal-lg W80p">
+                    <div class="modal-content">
+                        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close" data-toggle="tooltip" data-placement="auto top" title="TeclaFechar"
+                                data-ltooltip="Nao"><span aria-hidden="true">X</span></button>
+                            <h4 class="modal-title" id="ModalLabelInsightsResp">Insights <span></span></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="AguardeIA" data-l="Aguarde"></div>
+                            <div class="RespIA"></div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-12"> <button type="button" class="btn btn-default btn-lg btn-sm"
+                                            data-dismiss="modal" data-l="Fechar" data-toggle="tooltip"
+                                            data-placement="auto top" title="(Esc)"></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page-wrapper" style="margin: 0px 0px 0px 15.2%; min-height: 1287px;">
+            <div id="ContainerApp">
+                <div id="Msg" class="Mt50"></div>
+                <div id="ContainerHomePortal">
+
+
+
+
+
+                    <!-- COMEÇO DO BLOCO DA TENTATIVA -->
+                    <div class="row" id="ModalChamados" data-e="Salvar" tabindex="-1" role="dialog"
+                        aria-labelledby="ModalLabelChamados" aria-hidden="true" data-keyboard="true"
+                        data-backdrop="static">
+                        <div class="W80p">
+                            <div class="modal-body" style="">
+                                <div class="MsgModal"> </div>
+                                <div data-h="adicional"></div>
+                                <div class="hide TrModalApproval"></div>
+                                <div class="hide StatusAtual"></div>
+                                <div role="tabpanel">
+                                    <ul class="nav nav-tabs hide" role="tablist">
+                                        <li role="presentation" class="hide"> <a href="#Aba1Chamados"
+                                                aria-controls="Aba1Chamados" role="tab" data-toggle="tab"> <span
+                                                    class="glyphicon glyphicon-tag"></span> </a> </li>
+                                        <li role="presentation" class="hide"> <a href="#Aba2Chamados"
+                                                aria-controls="Aba2Chamados" role="tab" data-toggle="tab"> <span
+                                                    class="fa fa-file-o"></span> </a> </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content" style="">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="Aba1Chamados">
+                                        <form class="form-horizontal Pt10" role="form" method="PUT">
+                                            <div data-h="chamadocriar"><select name="TChamado[CodUsuario]" class="hide"
+                                                    required="">
+                                                    <option value="1657" selected="selected">LETICIA CARVALHO
+                                                        VON STEIGER</option>
+                                                </select>
+                                                <div class="form-group hide"><label class="control-label col-sm-2"
+                                                        data-l="Assunto">Assunto</label>
+                                                    <div class="col-sm-8"><input type="text" class="form-control"
+                                                            name="TChamado[Assunto]" required=""></div>
+                                                </div>
+                                                <div class="form-group"><label class="control-label col-sm-4"></label>
+                                                </div>
+                                                <div data-h="AAPortal" class="hide">
+                                                    <div class="form-group"><label
+                                                            class="control-label col-sm-2">Assunto</label>
+                                                        <div class="col-sm-8"><input type="hidden"
+                                                                name="TChamado[AutoCategoria]"><select
+                                                                name="TChamado[AutoCategoriaArvore]"
+                                                                class="form-control" required="">
+                                                                <option value="" selected="selected"></option>
+                                                                <option value="Acerca">Acerca</option>
+                                                                <option value="Advanced">Advanced</option>
+                                                                <option value="Analyzer">Analyzer</option>
+                                                                <option value="Faturamento">Faturamento</option>
+                                                                <option value="iStar">iStar</option>
+                                                                <option value="One Number">One Number</option>
+                                                                <option value="Outras Solicitações">Outras
+                                                                    Solicitações</option>
+                                                                <option value="Service Desk">Service Desk
+                                                                </option>
+                                                                <option value="WRS">WRS</option>
+                                                            </select></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group"><label class="control-label col-sm-2"></label>
+                                                    <div class="col-sm-2">
+                                                        <a href="https://abbottepdlatam.my.salesforce.com/"
+                                                            target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>Acerca
+                                                            </button>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="https://abtepd.desk.ms/?LoginPortal" target="_blank"
+                                                            rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>EPD
+                                                                Resolve
+                                                            </button>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="https://www.advresources.com.br:8443/portal/abbott"
+                                                            target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>Portal
+                                                                da Cota
+                                                            </button>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="https://wrs.solutions.iqvia.com/login.php"
+                                                            target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>WRS</button></a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group"><label class="control-label col-sm-2"></label>
+                                                    <div class="col-sm-2">
+                                                        <a href="https://www.fuel50careerdrive.com/sso-login#/fuel-goals/my-action-plan"
+                                                            target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>Career<br>
+                                                                Connect</button></a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="https://abbottacademy.scaffoldplatform.com.br/auth/signin?intended=%2Fcourse_view%2F28438%2Fclasses%2F275326%3Fteam_id%3D62387%26productId%3D18605"
+                                                            target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>Abbott
+                                                                Academy</button></a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="https://hrlogin.abbott.com/signin/verify/okta/password"
+                                                            target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>Workday</button></a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="https://us2.concursolutions.com/home" target="_blank"
+                                                            rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>Concur</button></a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group"><label class="control-label col-sm-2"></label>
+                                                    <div class="col-sm-2">
+                                                        <a href="" target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>WRS</button></a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="" target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>CWT</button></a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="" target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>My
+                                                                HR</button></a>
+                                                    </div>
+                                                    <div class="col-sm-2"><button type="button"
+                                                            class="btn btn-primary btn-lg btnArvoreBloco"
+                                                            style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>Funcional<br>
+                                                            Card</button>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group"><label class="control-label col-sm-2"></label>
+                                                    <div class="col-sm-2">
+                                                        <a href="" target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>Minha
+                                                                <br>Mobilidade</button></a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="" target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>Previdência
+                                                                <br>Privada</button></a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="" target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>Telefones<br>Úteis</button></a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="" target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>Portal
+                                                                de <br>Benefícios</button></a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group"><label class="control-label col-sm-2"></label>
+                                                    <div class="col-sm-2">
+                                                        <a href="" target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>Abrace
+                                                                a <br>Vida</button></a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="" target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>IQVIA</button></a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="" target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>LERN</button></a>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <a href="" target="_blank" rel="noopener noreferrer">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-lg btnArvoreBloco"
+                                                                style="width: 150px; height: 150px;white-space: normal;word-break: break-word;padding: 5px;"><br>Cepa
+                                                                Driver</button></a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group hide" data-h="formContratoExpirado"
+                                                    data-closest="" style="margin-bottom: 0px;">
+                                                    <div class="col-sm-offset-2 col-sm-8">
+                                                        <div data-h="ContratoExpirado" data-tp="Dinamico"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group hide" data-h="formObsImportante" data-closest=""
+                                                    style="margin-bottom: 0px;">
+                                                    <div class="col-sm-offset-2 col-sm-8">
+                                                        <div data-h="ObsImportante" data-tp="Dinamico"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" data-h="AprovadorSolicitante" data-closest="">
+                                                </div>
+                                                <div class="form-group hide" data-h="AdicionalREChamado"
+                                                    data-closest="">
+                                                    <div class="col-sm-offset-2 col-sm-8">
+                                                        <div data-h="REChamado" data-tp="Dinamico"></div>
+                                                    </div>
+                                                </div>
+                                                <div data-h="CamposExtras"></div>
+                                                <div data-h="BaseConhecimento"></div>
+                                                <div class="form-group hide"><label class="control-label col-sm-2"
+                                                        data-l="Descricao">Descrição</label>
+                                                    <div class="col-sm-8">
+                                                        <div contenteditable="" id="DescricaoPortalCliente"
+                                                            style="min-height:244px;padding:10px;width:100%;border:1px;border-style:solid;border-color:#ccc;border-radius:5px;">
+                                                        </div><textarea class="form-control hide"
+                                                            name="TChamado[Descricao]" rows="6"
+                                                            required=""></textarea><textarea class="hide"
+                                                            name="TChamado[AuxDescricao]"
+                                                            disabled="disabled"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group hide"><label
+                                                        class="control-label col-sm-2"></label>
+                                                    <div class="col-sm-5"><button type="button"
+                                                            class="btn btn-info btn-xs AnexaArquivo"><span
+                                                                class="glyphicon glyphicon-cloud-upload"></span>
+                                                            <span data-l="AnexarArquivos">Anexar
+                                                                Arquivos</span></button><input type="file"
+                                                            class="form-control hide" name="Anexos" data-updatefile=""
+                                                            multiple=""></div>
+                                                </div>
+                                                <div data-h="updateFile">
+                                                    <div data-h="updateFileAnexos"></div>
+                                                </div>
+                                            </div>
+                                            <div data-h="timeline"></div>
+                                        </form>
+                                    </div>
+                                    <!-- <div role="tabpanel" class="tab-pane Pt10 fade" id="Aba2Chamados">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" data-l="PesquisaSatisfacao"></div>
+                                            <div class="panel-body">
+                                                <div data-h="PesquisaSatisfacao"> </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIM DO BLOCO DA TENTATIVA -->
+
+
+
+
+
+                <div id="PanelHomePortal" class="HControler">
+                    <!-- <div class="row">
+                        <div class="col-lg-8">
+                            <div class="hide col-xs-11 col-sm-5 PortalAreaSub"
+                                style="position:absolute;top:100px;z-index:2" data-h="PortalAreaSub" data-closest="">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading"> <button type="button"
+                                            class="close FecharVerChamadosHomePortal" data-toggle="tooltip"
+                                            data-placement="auto top" title="" data-ltooltip="Sim"
+                                            data-original-title="Fechar (Esc)"><span
+                                                aria-hidden="true">X</span></button>
+                                        <h3 class="panel-title"></h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="btn-group btn-group btn-group-justified"> <span
+                                                class="btn btn-info VerChamadosHomePortalCriacao"
+                                                data-l="Criados">Criados</span> <span
+                                                class="btn btn-info VerChamadosHomePortalFinalizacao"
+                                                data-l="Finalizados">Finalizados</span> </div> <input class="hide">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading"> <i class="fa fa-line-chart fa-fw"></i> <span
+                                        data-l="AtendimentoAbFimMes">Chamados Abertos / Finalizados por mês</span>
+                                </div>
+                                <div class="panel-body">
+                                    <div id="morris-area-chart-Portal" style="position: relative;"><svg height="342"
+                                            version="1.1" width="1000" xmlns="http://www.w3.org/2000/svg"
+                                            style="overflow: hidden; position: relative; left: -0.933319px;">
+                                            <desc>Created with Raphaël 2.1.2</desc>
+                                            <defs></defs><text style="text-anchor: end; font: 12px sans-serif;"
+                                                x="29.83333396911621" y="294.741669748" text-anchor="end"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal">
+                                                <tspan dy="4.0000010468281175">0</tspan>
+                                            </text>
+                                            <path style="" fill="none" stroke="#aaaaaa" d="M42.33333396911621,294.5H975"
+                                                stroke-width="0.5"></path><text
+                                                style="text-anchor: end; font: 12px sans-serif;" x="29.83333396911621"
+                                                y="227.30625231099998" text-anchor="end" font="10px &quot;Arial&quot;"
+                                                stroke="none" fill="#888888" font-size="12px" font-family="sans-serif"
+                                                font-weight="normal">
+                                                <tspan dy="3.9999931557265427">3</tspan>
+                                            </text>
+                                            <path style="" fill="none" stroke="#aaaaaa" d="M42.33333396911621,227.5H975"
+                                                stroke-width="0.5"></path><text
+                                                style="text-anchor: end; font: 12px sans-serif;" x="29.83333396911621"
+                                                y="159.870834874" text-anchor="end" font="10px &quot;Arial&quot;"
+                                                stroke="none" fill="#888888" font-size="12px" font-family="sans-serif"
+                                                font-weight="normal">
+                                                <tspan dy="4.000000523414059">6</tspan>
+                                            </text>
+                                            <path style="" fill="none" stroke="#aaaaaa" d="M42.33333396911621,159.5H975"
+                                                stroke-width="0.5"></path><text
+                                                style="text-anchor: end; font: 12px sans-serif;" x="29.83333396911621"
+                                                y="92.43541743699998" text-anchor="end" font="10px &quot;Arial&quot;"
+                                                stroke="none" fill="#888888" font-size="12px" font-family="sans-serif"
+                                                font-weight="normal">
+                                                <tspan dy="4.000000261707015">9</tspan>
+                                            </text>
+                                            <path style="" fill="none" stroke="#aaaaaa" d="M42.33333396911621,92.5H975"
+                                                stroke-width="0.5"></path><text
+                                                style="text-anchor: end; font: 12px sans-serif;" x="29.83333396911621"
+                                                y="25" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none"
+                                                fill="#888888" font-size="12px" font-family="sans-serif"
+                                                font-weight="normal">
+                                                <tspan dy="4">12</tspan>
+                                            </text>
+                                            <path style="" fill="none" stroke="#aaaaaa" d="M42.33333396911621,25.5H975"
+                                                stroke-width="0.5"></path><text
+                                                style="text-anchor: middle; font: 12px sans-serif;"
+                                                x="939.1282051526583" y="307.241669748" text-anchor="middle"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal"
+                                                transform="matrix(0.866,-0.5,0.5,0.866,-42.7739,524.9228)">
+                                                <tspan dy="4.0000010468281175">09/24</tspan>
+                                            </text><text style="text-anchor: middle; font: 12px sans-serif;"
+                                                x="867.384615457975" y="307.241669748" text-anchor="middle"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal"
+                                                transform="matrix(0.866,-0.5,0.5,0.866,-52.3858,489.0511)">
+                                                <tspan dy="4.0000010468281175">08/24</tspan>
+                                            </text><text style="text-anchor: middle; font: 12px sans-serif;"
+                                                x="795.6410257632916" y="307.241669748" text-anchor="middle"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal"
+                                                transform="matrix(0.866,-0.5,0.5,0.866,-61.9976,453.1793)">
+                                                <tspan dy="4.0000010468281175">07/24</tspan>
+                                            </text><text style="text-anchor: middle; font: 12px sans-serif;"
+                                                x="723.8974360686082" y="307.241669748" text-anchor="middle"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal"
+                                                transform="matrix(0.866,-0.5,0.5,0.866,-71.6094,417.3075)">
+                                                <tspan dy="4.0000010468281175">06/24</tspan>
+                                            </text><text style="text-anchor: middle; font: 12px sans-serif;"
+                                                x="652.1538463739248" y="307.241669748" text-anchor="middle"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal"
+                                                transform="matrix(0.866,-0.5,0.5,0.866,-81.2212,381.4357)">
+                                                <tspan dy="4.0000010468281175">05/24</tspan>
+                                            </text><text style="text-anchor: middle; font: 12px sans-serif;"
+                                                x="580.4102566792415" y="307.241669748" text-anchor="middle"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal"
+                                                transform="matrix(0.866,-0.5,0.5,0.866,-90.833,345.5639)">
+                                                <tspan dy="4.0000010468281175">04/24</tspan>
+                                            </text><text style="text-anchor: middle; font: 12px sans-serif;"
+                                                x="508.6666669845581" y="307.241669748" text-anchor="middle"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal"
+                                                transform="matrix(0.866,-0.5,0.5,0.866,-100.4449,309.6921)">
+                                                <tspan dy="4.0000010468281175">03/24</tspan>
+                                            </text><text style="text-anchor: middle; font: 12px sans-serif;"
+                                                x="436.92307728987475" y="307.241669748" text-anchor="middle"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal"
+                                                transform="matrix(0.866,-0.5,0.5,0.866,-110.0567,273.8203)">
+                                                <tspan dy="4.0000010468281175">02/24</tspan>
+                                            </text><text style="text-anchor: middle; font: 12px sans-serif;"
+                                                x="365.17948759519135" y="307.241669748" text-anchor="middle"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal"
+                                                transform="matrix(0.866,-0.5,0.5,0.866,-119.6685,237.9485)">
+                                                <tspan dy="4.0000010468281175">01/24</tspan>
+                                            </text><text style="text-anchor: middle; font: 12px sans-serif;"
+                                                x="293.435897900508" y="307.241669748" text-anchor="middle"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal"
+                                                transform="matrix(0.866,-0.5,0.5,0.866,-129.2803,202.0767)">
+                                                <tspan dy="4.0000010468281175">12/23</tspan>
+                                            </text><text style="text-anchor: middle; font: 12px sans-serif;"
+                                                x="221.69230820582465" y="307.241669748" text-anchor="middle"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal"
+                                                transform="matrix(0.866,-0.5,0.5,0.866,-138.5169,165.9882)">
+                                                <tspan dy="4.0000010468281175">11/23</tspan>
+                                            </text><text style="text-anchor: middle; font: 12px sans-serif;"
+                                                x="149.94871851114127" y="307.241669748" text-anchor="middle"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal"
+                                                transform="matrix(0.866,-0.5,0.5,0.866,-148.5039,130.3331)">
+                                                <tspan dy="4.0000010468281175">10/23</tspan>
+                                            </text><text style="text-anchor: middle; font: 12px sans-serif;"
+                                                x="78.20512881645789" y="307.241669748" text-anchor="middle"
+                                                font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+                                                font-size="12px" font-family="sans-serif" font-weight="normal"
+                                                transform="matrix(0.866,-0.5,0.5,0.866,-158.1158,94.4613)">
+                                                <tspan dy="4.0000010468281175">09/23</tspan>
+                                            </text>
+                                            <rect x="51.30128268095163" y="272.263197269" width="25.403846135506264"
+                                                height="22.478472479000004" r="0" rx="0" ry="0" fill="#9ed1ff"
+                                                stroke="none" style="fill-opacity: 1;" fill-opacity="1"></rect>
+                                            <rect x="79.70512881645789" y="249.78472478999998"
+                                                width="25.403846135506264" height="44.95694495800001" r="0" rx="0"
+                                                ry="0" fill="#0237ff" stroke="none" style="fill-opacity: 1;"
+                                                fill-opacity="1"></rect>
+                                            <rect x="123.044872375635" y="249.78472478999998" width="25.403846135506264"
+                                                height="44.95694495800001" r="0" rx="0" ry="0" fill="#9ed1ff"
+                                                stroke="none" style="fill-opacity: 1;" fill-opacity="1"></rect>
+                                            <rect x="151.44871851114127" y="249.78472478999998"
+                                                width="25.403846135506264" height="44.95694495800001" r="0" rx="0"
+                                                ry="0" fill="#0237ff" stroke="none" style="fill-opacity: 1;"
+                                                fill-opacity="1"></rect>
+                                            <rect x="194.78846207031836" y="249.78472478999998"
+                                                width="25.403846135506264" height="44.95694495800001" r="0" rx="0"
+                                                ry="0" fill="#9ed1ff" stroke="none" style="fill-opacity: 1;"
+                                                fill-opacity="1"></rect>
+                                            <rect x="223.19230820582462" y="249.78472478999998"
+                                                width="25.403846135506264" height="44.95694495800001" r="0" rx="0"
+                                                ry="0" fill="#0237ff" stroke="none" style="fill-opacity: 1;"
+                                                fill-opacity="1"></rect>
+                                            <rect x="266.5320517650017" y="272.263197269" width="25.403846135506264"
+                                                height="22.478472479000004" r="0" rx="0" ry="0" fill="#9ed1ff"
+                                                stroke="none" style="fill-opacity: 1;" fill-opacity="1"></rect>
+                                            <rect x="294.935897900508" y="272.263197269" width="25.403846135506264"
+                                                height="22.478472479000004" r="0" rx="0" ry="0" fill="#0237ff"
+                                                stroke="none" style="fill-opacity: 1;" fill-opacity="1"></rect>
+                                            <rect x="338.27564145968506" y="92.43541743699998"
+                                                width="25.403846135506264" height="202.306252311" r="0" rx="0" ry="0"
+                                                fill="#9ed1ff" stroke="none" style="fill-opacity: 1;" fill-opacity="1">
+                                            </rect>
+                                            <rect x="366.67948759519135" y="114.91388991599999"
+                                                width="25.403846135506264" height="179.827779832" r="0" rx="0" ry="0"
+                                                fill="#0237ff" stroke="none" style="fill-opacity: 1;" fill-opacity="1">
+                                            </rect>
+                                            <rect x="410.0192311543684" y="249.78472478999998"
+                                                width="25.403846135506264" height="44.95694495800001" r="0" rx="0"
+                                                ry="0" fill="#9ed1ff" stroke="none" style="fill-opacity: 1;"
+                                                fill-opacity="1"></rect>
+                                            <rect x="438.4230772898747" y="227.30625231099998"
+                                                width="25.403846135506264" height="67.43541743700001" r="0" rx="0"
+                                                ry="0" fill="#0237ff" stroke="none" style="fill-opacity: 1;"
+                                                fill-opacity="1"></rect>
+                                            <rect x="481.7628208490519" y="159.870834874" width="25.403846135506264"
+                                                height="134.870834874" r="0" rx="0" ry="0" fill="#9ed1ff" stroke="none"
+                                                style="fill-opacity: 1;" fill-opacity="1"></rect>
+                                            <rect x="510.16666698455816" y="159.870834874" width="25.403846135506264"
+                                                height="134.870834874" r="0" rx="0" ry="0" fill="#0237ff" stroke="none"
+                                                style="fill-opacity: 1;" fill-opacity="1"></rect>
+                                            <rect x="553.5064105437352" y="249.78472478999998"
+                                                width="25.403846135506264" height="44.95694495800001" r="0" rx="0"
+                                                ry="0" fill="#9ed1ff" stroke="none" style="fill-opacity: 1;"
+                                                fill-opacity="1"></rect>
+                                            <rect x="581.9102566792415" y="272.263197269" width="25.403846135506264"
+                                                height="22.478472479000004" r="0" rx="0" ry="0" fill="#0237ff"
+                                                stroke="none" style="fill-opacity: 1;" fill-opacity="1"></rect>
+                                            <rect x="625.2500002384186" y="249.78472478999998"
+                                                width="25.403846135506264" height="44.95694495800001" r="0" rx="0"
+                                                ry="0" fill="#9ed1ff" stroke="none" style="fill-opacity: 1;"
+                                                fill-opacity="1"></rect>
+                                            <rect x="653.6538463739248" y="227.30625231099998"
+                                                width="25.403846135506264" height="67.43541743700001" r="0" rx="0"
+                                                ry="0" fill="#0237ff" stroke="none" style="fill-opacity: 1;"
+                                                fill-opacity="1"></rect>
+                                            <rect x="696.9935899331019" y="249.78472478999998"
+                                                width="25.403846135506264" height="44.95694495800001" r="0" rx="0"
+                                                ry="0" fill="#9ed1ff" stroke="none" style="fill-opacity: 1;"
+                                                fill-opacity="1"></rect>
+                                            <rect x="725.3974360686082" y="272.263197269" width="25.403846135506264"
+                                                height="22.478472479000004" r="0" rx="0" ry="0" fill="#0237ff"
+                                                stroke="none" style="fill-opacity: 1;" fill-opacity="1"></rect>
+                                            <rect x="768.7371796277853" y="272.263197269" width="25.403846135506264"
+                                                height="22.478472479000004" r="0" rx="0" ry="0" fill="#9ed1ff"
+                                                stroke="none" style="fill-opacity: 1;" fill-opacity="1"></rect>
+                                            <rect x="797.1410257632915" y="249.78472478999998"
+                                                width="25.403846135506264" height="44.95694495800001" r="0" rx="0"
+                                                ry="0" fill="#0237ff" stroke="none" style="fill-opacity: 1;"
+                                                fill-opacity="1"></rect>
+                                            <rect x="840.4807693224686" y="272.263197269" width="25.403846135506264"
+                                                height="22.478472479000004" r="0" rx="0" ry="0" fill="#9ed1ff"
+                                                stroke="none" style="fill-opacity: 1;" fill-opacity="1"></rect>
+                                            <rect x="868.8846154579749" y="272.263197269" width="25.403846135506264"
+                                                height="22.478472479000004" r="0" rx="0" ry="0" fill="#0237ff"
+                                                stroke="none" style="fill-opacity: 1;" fill-opacity="1"></rect>
+                                            <rect x="912.2243590171521" y="272.263197269" width="25.403846135506264"
+                                                height="22.478472479000004" r="0" rx="0" ry="0" fill="#9ed1ff"
+                                                stroke="none" style="fill-opacity: 1;" fill-opacity="1"></rect>
+                                            <rect x="940.6282051526583" y="272.263197269" width="25.403846135506264"
+                                                height="22.478472479000004" r="0" rx="0" ry="0" fill="#0237ff"
+                                                stroke="none" style="fill-opacity: 1;" fill-opacity="1"></rect>
+                                        </svg>
+                                        <div class="morris-hover morris-default-style"
+                                            style="left: 240.436px; top: 135px; display: none;">
+                                            <div class="morris-hover-row-label">12/23</div>
+                                            <div class="morris-hover-point"
+                                                style="border-radius:10px;padding-left:5px;padding-right:5px;margin:3px;color:#f7f9fc;background-color: #9ed1ff">
+                                                Criação:
+                                                1
+                                            </div>
+                                            <div class="morris-hover-point"
+                                                style="border-radius:10px;padding-left:5px;padding-right:5px;margin:3px;color:#f7f9fc;background-color: #0237ff">
+                                                Finalização:
+                                                1
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"> <i class="fa fa-pie-chart fa-fw"></i> <span
+                                        data-l="Status">Status</span> </div>
+                                <div class="panel-body">
+                                    <div id="morris-donut-chart-Portal"><svg height="342" version="1.1" width="485"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            style="overflow: hidden; position: relative; left: -0.966675px;">
+                                            <desc>Created with Raphaël 2.1.2</desc>
+                                            <defs></defs>
+                                            <path style="opacity: 1;" fill="none" stroke="#0237ff"
+                                                d="M242.5,283.3333333333333" stroke-width="1" opacity="1" class="Cp">
+                                            </path>
+                                            <path style="" fill="#0237ff" stroke="#ffffff"
+                                                d="M242.5,286.3333333333333A164,164,0,0,1,242.5,338Z" stroke-width="2"
+                                                class="Cp"></path><text
+                                                style="text-anchor: middle; font: 800 15px &quot;Arial&quot;;" x="242.5"
+                                                y="164" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none"
+                                                fill="#000000" font-size="15px" font-weight="800"
+                                                transform="matrix(0.7498,0,0,0.7498,60.6712,43.283)"
+                                                stroke-width="1.3336721280725992">
+                                                <tspan dy="5">Não possui Chamados em Aberto. :)</tspan>
+                                            </text><text style="text-anchor: middle; font: 14px &quot;Arial&quot;;"
+                                                x="242.5" y="184" text-anchor="middle" font="10px &quot;Arial&quot;"
+                                                stroke="none" fill="#000000" font-size="14px"
+                                                transform="matrix(2.2778,0,0,2.2778,-309.8611,-224.8889)"
+                                                stroke-width="0.43902439024390244">
+                                                <tspan dy="5">0</tspan>
+                                            </text>
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Pf Zi3 R14 B2vh">
+                            <div id="HistNavPortal">
+                                <div class="Pt5"></div><button type="button" class="btn btn-success btn-lg Br50 Criar"
+                                    data-tm="Chamados" data-ag="false" data-toggle="tooltip" data-placement="top"
+                                    title="" data-ltooltip="Sim" data-original-title="Criar Chamado"> <span
+                                        class="glyphicon glyphicon-tag"></span></button>
+                            </div> <button type="button" class="btn btn-success btn-lg Br50 hide AtalhosHome"> <span
+                                    class="glyphicon glyphicon-plus"></span> </button>
+                        </div>
+                    </div> -->
+                </div>
+                <div id="ContainerChamados">
+                    <div id="PanelChamados" class="HControler"></div>
+                    <div class="modal" id="ModalChamados" data-e="Salvar" tabindex="-1" role="dialog"
+                        aria-labelledby="ModalLabelChamados" aria-hidden="true" data-keyboard="true"
+                        data-backdrop="static">
+                        <div class="modal-dialog modal-lg W80p">
+                            <div class="modal-content">
+                                <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close" data-toggle="tooltip" data-placement="auto top"
+                                        title="TeclaFechar" data-ltooltip="Nao"> <span aria-hidden="true">X</span>
+                                    </button>
+                                    <h4 class="modal-title" id="ModalLabelChamados"><span></span> <span
+                                            data-l="Chamado"></span> <br><small></small></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="MsgModal"> </div>
+                                    <div data-h="adicional"></div>
+                                    <div class="hide TrModalApproval"></div>
+                                    <div class="hide StatusAtual"></div>
+                                    <!-- <div role="tabpanel">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active"> <a href="#Aba1Chamados"
+                                                    aria-controls="Aba1Chamados" role="tab" data-toggle="tab"> <span
+                                                        class="glyphicon glyphicon-tag"></span> </a> </li>
+                                        </ul>
+                                    </div> -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade in active" id="Aba1Chamados">
+                                            <form class="form-horizontal Pt10" role="form" method="PUT">
+                                                <input class="hide" data-ms="e" name="TChamado[Codigo]" data-cg="2">
+                                                <input class="hide" data-ms="e" name="TChamado[Criacao]" data-cg="3"
+                                                    data-fcg="ConcatSmallTraduzDataHora,HoraCriacao"
+                                                    disabled="disabled">
+                                                <input class="hide" data-ms="e" name="TChamado[Cancelamento]"
+                                                    data-cg="5" data-fcg="ConcatSmallTraduzDataHora,HoraUltimaAcao"
+                                                    disabled="disabled">
+                                                <input class="hide" name="TChamado[Agendamento]" data-cg="6"
+                                                    data-fcg="ConcatSmallTraduzDataHora,HoraAgendamento"
+                                                    disabled="disabled">
+                                                <input class="hide" data-ms="e" name="TChamado[St]" data-cg="7"
+                                                    data-fcg="IconCloudFStatus,Icone" data-ocg="false"
+                                                    disabled="disabled">
+                                                <input class="hide" data-ms="e" name="TChamado[Assunto]"
+                                                    data-fcg="ConcatSmallDefaultTooltip,Descricao,LimitDescricao"
+                                                    data-cg="8" disabled="disabled">
+                                                <input class="hide" data-ms="e" name="TChamado[Descricao]"
+                                                    disabled="disabled">
+                                                <input type="hidden" name="TChamado[CodAutoCat]" disabled="disabled">
+
+
+                                                <input class="hide" data-ms="e" name="TChamado[Grupo]"
+                                                    disabled="disabled"> <input class="hide" data-ms="e"
+                                                    name="TChamado[TAcoes]" data-cg="13" data-lcg="TAcoesIco"
+                                                    disabled="disabled"> <input class="hide" name="TChamado[PS]"
+                                                    data-cg="22" disabled="disabled"
+                                                    data-fcg="PesquisaSatisfacao,PS,Codusuario,PSResponsavel,PSexpirou,Token">
+                                                <input class="hide" data-ms="e" name="TChamado[QtAnexos]" data-cg="23"
+                                                    data-fcg="IconAnexos" disabled="disabled"> <input type="hidden"
+                                                    name="TChamado[ARMaestro]" disabled="disabled">
+                                                <div class="panel panel-default" data-h="ARMaestro"></div>
+                                                <div data-h="AdicionalHorasCliente" data-closest="" class="hide">
+                                                    <div class="form-group"> <label class="col-sm-2"></label>
+                                                        <div class="col-sm-8">
+                                                            <div class="status-nag Cp">
+                                                                <div class="status-split status-danger"> <span
+                                                                        class="fa fa-dollar"></span> </div>
+                                                                <div class="status-text status-span"
+                                                                    data-toggle="collapse" data-target=".LimiteChamado">
+                                                                    <span data-h="TotalHorasCliente"
+                                                                        class="text-info"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="LimiteChamado collapse">
+                                                                <div data-h="InfoDadosLimiteChamado" data-tp="Dinamico">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-h="chamadocriar"></div>
+                                                <div data-h="timeline"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="MsgModal"> </div>
+                                    <div class="ContinuarTrigger"></div>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <div class="col-sm-12"> <label class="checkbox-inline"><input
+                                                        type="checkbox" class="Continuar"><span
+                                                        data-l="ContinuarCriando"></span></label> <button type="button"
+                                                    class="btn btn-default btn-lg btn-sm ConfirmarFechar"
+                                                    data-l="Fechar" data-toggle="tooltip" data-placement="auto top"
+                                                    title="(Esc)"></button> <button type="button"
+                                                    class="btn btn-success btn-lg btn-sm Clonar hide" data-tm="Chamados"
+                                                    data-toggle="tooltip" data-placement="auto top" title="Clonar"
+                                                    data-ltooltip="Nao"><span
+                                                        class="glyphicon glyphicon-duplicate"></span></button>
+                                                <button type="button" class="btn btn-primary btn-lg btn-sm Salvar"
+                                                    data-tm="Chamados" data-ag="true" data-l="Salvar"
+                                                    data-toggle="tooltip" data-placement="auto top"
+                                                    title="(Ctrl+Enter)"></button> <button type="button"
+                                                    class="btn btn-primary btn-lg btn-sm SalvarPS hide" data-ag="true"
+                                                    data-l="Salvar"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="abbott-portal_files/All.min.js"></script>
+    <script>try { var locatonTemp = location.search; if (locatonTemp.indexOf('Ticket%23ChamadosSuporte:%5B%7BP%7D') >= 1) { window.location = decodeURIComponent(locatonTemp.replace(/[(].*?[)]|%20|-/g, '')); } } catch (err) { } var version = 12812;/*limpa todas as sessin storages menos o hash*/var hashTemp = sessionStorage.getItem('hash'); var versionTemp = sessionStorage.getItem('version'); var errologinTemp = sessionStorage.getItem('ErroLogin'); var loginexternoTemp = sessionStorage.getItem('LoginExterno'); var dgdTemp = sessionStorage.getItem('dGDTemp'); sessionStorage.clear(); sessionStorage.setItem('hash', hashTemp); sessionStorage.setItem('ErroLogin', errologinTemp); sessionStorage.setItem('LoginExterno', loginexternoTemp); sessionStorage.setItem('dGDTemp', dgdTemp);/*mantem versao do sistema caso nao tenha sido alterada*/if (versionTemp == version) { version = versionTemp; } sessionStorage.setItem('random', version); $.ajax({ url: 'https://dqnkcwgy21udk.cloudfront.net/view/' + version + '/html/Base.html', dataType: "text", cache: true }).done(function (response) { $('#Base').html(response); response = ''; $('[data-h="progressbar"] path:eq(1)').attr('fill', '#0237ff');/*funcao appDirect*/var appDirectFunction = function () {/*verifica se ja tem idioma setado se nao pega pt_br como padrao*/var lang = LZString.decompressFromUTF16(localStorage.getItem('IdiomaPortal')); if (lang == undefined || lang == "" || lang == "undefined") { var userLang = navigator.language || navigator.userLanguage; var langsDisp = ['ar', 'bn', 'de', 'en-US', 'es-ES', 'fr', 'hi', 'it', 'ja', 'pt-BR', 'pt', 'ru', 'zh']; if (langsDisp.indexOf(userLang) >= 0) { lang = userLang; } else { lang = "en-US"; } localStorage.setItem('IdiomaPortal', LZString.compressToUTF16(lang)); } else { lang = lang.replace("pt_br", "pt-BR"); lang = lang.replace("en_us", "en-US"); lang = lang.replace("es_es", "es-ES"); lang = lang.replace("de-DE", "de"); } $.ajax({ url: 'https://dqnkcwgy21udk.cloudfront.net/view/' + version + '/js/lang/' + lang + '.min.js', dataType: "script", cache: true }).done(function () { $('[data-h="progressbar"] path:eq(2)').attr('fill', '#0237ff');/*idioma custom*//*var labelsCustom = LZString.decompressFromUTF16(localStorage.getItem('ListaAjaxLabels'));if(labelsCustom){labelsCustom = JSON.parse( labelsCustom );$.each(labelsCustom[lang], function(k, v){ L[k] = v; });}*/$.ajax({ url: 'https://dqnkcwgy21udk.cloudfront.net/view/' + version + '/js/Library.min.js', dataType: 'script', cache: true }).done(function () { $.ajax({ url: 'https://dqnkcwgy21udk.cloudfront.net/view/' + version + '/js/App.min.js', dataType: 'script', cache: true }).done(function () { $('[data-h="progressbar"] path:eq(3)').attr('fill', '#0237ff'); $.ajax({ url: 'https://dqnkcwgy21udk.cloudfront.net/view/' + version + '/js/Controller2.min.js', dataType: 'script', cache: true }).done(function () { $('[data-h="progressbar"]').remove(); }); }); }); }); }; if (appDirect) { $.ajax({ url: 'https://dqnkcwgy21udk.cloudfront.net/view/' + version + '/html/App' + appDirect[0] + '.html', dataType: 'text', cache: true }).done(function (response) { if (response != '') { $('#Msg').after(response); } appDirectFunction(); }); } else { appDirectFunction(); } });/*se iphone trata barra de rolagem*/if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) { $('body').append('<style>.modal-open { position: fixed; width: 100%; overflow: hidden;}</style>'); }</script>
+    <div id="idTempDownload" style="display:none;"></div>
+    <style></style>
+    <script>    if (localStorage.getItem('md') == '1') { $('#idTempDownload').after('<link rel="stylesheet" type="text/css" href="https://dqnkcwgy21udk.cloudfront.net/view/' + version + '/css/DarkMode.min.css">'); $('#wrapper').addClass('darkmode'); } else { $('#wrapper').addClass('defaultmode'); }    </script>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
